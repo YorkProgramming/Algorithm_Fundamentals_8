@@ -30,3 +30,13 @@ so that at the end instead of the total sum, it prints the average roll.
 function rollOne() {
     return Math.floor(Math.random() * 6 + 1);
 }
+
+function playFives(num) {
+    for (var i = 0; i < num; i++) {
+        var roll = rollOne();
+        console.log(roll);
+        if (roll == 5) {
+            console.log("That's good luck!");
+        }
+    }
+}
