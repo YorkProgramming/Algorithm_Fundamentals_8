@@ -40,3 +40,19 @@ function playFives(num) {
         }
     }
 }
+
+function playStatistics() {
+    var min = 6;
+    var max = 1;
+    for (var i = 0; i < 8; i++) {
+        var roll = rollOne();
+        if (roll < min) {
+            min = roll;
+        }
+        if (roll > max) {
+            max = roll;
+        }
+    }
+    console.log("Min: " + min + ", Max: " + max);
+}
+
