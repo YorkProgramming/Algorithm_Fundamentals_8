@@ -56,3 +56,19 @@ function playStatistics() {
     console.log("Min: " + min + ", Max: " + max);
 }
 
+function playStatistics2() {
+    var min = 6;
+    var max = 1;
+    var sum = 0;
+    for (var i = 0; i < 8; i++) {
+        var roll = rollOne();
+        sum += roll;
+        if (roll < min) {
+            min = roll;
+        }
+        if (roll > max) {
+            max = roll;
+        }
+    }
+    console.log("Min: " + min + ", Max: " + max + ", Sum: " + sum);
+}
