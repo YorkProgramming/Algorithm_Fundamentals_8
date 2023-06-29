@@ -31,6 +31,9 @@ function rollOne() {
     return Math.floor(Math.random() * 6 + 1);
 }
 
+console.log(rollOne());
+
+
 function playFives(num) {
     for (var i = 0; i < num; i++) {
         var roll = rollOne();
@@ -40,6 +43,10 @@ function playFives(num) {
         }
     }
 }
+
+console.log(playFives(5));
+
+
 
 function playStatistics() {
     var min = 6;
@@ -55,6 +62,11 @@ function playStatistics() {
     }
     console.log("Min: " + min + ", Max: " + max);
 }
+
+console.log(playStatistics());
+
+
+
 
 function playStatistics2() {
     var min = 6;
@@ -73,6 +85,10 @@ function playStatistics2() {
     console.log("Min: " + min + ", Max: " + max + ", Sum: " + sum);
 }
 
+console.log(playStatistics2());
+
+
+
 function playStatistics3(num) {
     var min = 6;
     var max = 1;
@@ -89,3 +105,29 @@ function playStatistics3(num) {
     }
     console.log("Min: " + min + ", Max: " + max + ", Sum: " + sum);
 }
+
+console.log(playStatistics3(10));
+
+
+
+
+function playStatistics4(num) {
+    var min = 6;
+    var max = 1;
+    var sum = 0;
+    for (var i = 0; i < num; i++) {
+        var roll = rollOne();
+        sum += roll;
+        if (roll < min) {
+            min = roll;
+        }
+        if (roll > max) {
+            max = roll;
+        }
+    }
+    console.log("Min: " + min + ", Max: " + max + ", Avg: " + sum / num);
+}
+
+console.log(playStatistics4(10));
+
+//##############################################################################################
