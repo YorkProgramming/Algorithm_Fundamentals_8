@@ -131,3 +131,42 @@ function playStatistics4(num) {
 console.log(playStatistics4(10));
 
 //##############################################################################################
+
+//2. Statistics Until Doubles
+
+/*
+Here’s another game for our New Year’s Eve party. Implement a ’20-sided die’ that randomly
+returns integers between 1 and 20 inclusive. Roll these, tracking statistics until you get
+a value twice in a row. Display number of rolls, min, max, and average.
+*/
+
+function rollOne() {
+    return Math.floor(Math.random() * 20 + 1);
+}
+
+console.log(rollOne());
+
+
+function statisticsUntilDoubles() {
+    var min = 20;
+    var max = 1;
+    var sum = 0;
+    var count = 0;
+    var roll = rollOne();
+    while (roll != rollOne()) {
+        count++;
+        sum += roll;
+        if (roll < min) {
+            min = roll;
+        }
+        if (roll > max) {
+            max = roll;
+        }
+        roll = rollOne();
+    }
+    console.log("Min: " + min + ", Max: " + max + ", Avg: " + sum / count);
+}
+
+console.log(statisticsUntilDoubles());
+
+//#############################################################################################
