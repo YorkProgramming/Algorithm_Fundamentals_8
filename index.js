@@ -328,3 +328,35 @@ function weekdayName2(dayNum) {
 }
 
 weekdayName2(1);
+
+function someDays() {
+    for (var i = 0; i < 17; i++) {
+        var dayNum = Math.ceil(Math.random() * 365);
+        var weekdayNum = dayNum % 7;
+        switch (weekdayNum) {
+            case 1:
+                console.log("Sunday");
+                break;
+            case 2:
+                console.log("Monday");
+                break;
+            case 3:
+                console.log("Tuesday");
+                break;
+            case 4:
+                console.log("Wednesday");
+                break;
+            case 5:
+                console.log("Thursday");
+                break;
+            case 6:
+                console.log("Friday");
+                break;
+            case 7:
+                console.log("Saturday");
+                break;
+        }
+    }
+}
+
+someDays();
