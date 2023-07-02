@@ -299,3 +299,32 @@ function weekdayName(weekdayNum) {
 }
 
 weekdayName(1);
+
+function weekdayName2(dayNum) {
+    var weekdayNum = dayNum % 7;
+    switch (weekdayNum) {
+        case 1:
+            console.log("Sunday");
+            break;
+        case 2:
+            console.log("Monday");
+            break;
+        case 3:
+            console.log("Tuesday");
+            break;
+        case 4:
+            console.log("Wednesday");
+            break;
+        case 5:
+            console.log("Thursday");
+            break;
+        case 6:
+            console.log("Friday");
+            break;
+        case 7:
+            console.log("Saturday");
+            break;
+    }
+}
+
+weekdayName2(1);
