@@ -496,3 +496,41 @@ function fullDate(dayNum) {
 }
 
 fullDate(142);
+
+function fullDate2(dayNum) {
+    var monthNum = 0;
+    var monthDays = 0;
+    while (dayNum > monthDays) {
+        monthNum++;
+        monthDays += monthToDays(monthNum);
+    }
+    var weekdayNum = dayNum % 7;
+    switch (weekdayNum) {
+        case 1:
+            console.log("Sunday");
+            break;
+        case 2:
+            console.log("Monday");
+            break;
+        case 3:
+            console.log("Tuesday");
+            break;
+        case 4:
+            console.log("Wednesday");
+            break;
+        case 5:
+            console.log("Thursday");
+            break;
+        case 6:
+            console.log("Friday");
+            break;
+        case 7:
+            console.log("Saturday");
+            break;
+    }
+    console.log(monthName(monthNum));
+    console.log(dayNum - monthDays + monthToDays(monthNum));
+    console.log("2017");
+}
+
+fullDate2(142);
