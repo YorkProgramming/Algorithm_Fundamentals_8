@@ -446,3 +446,15 @@ function monthToDays(monthNum) {
 }
 
 monthToDays(1);
+
+function dayToMonth(dayNum) {
+    var monthNum = 0;
+    var monthDays = 0;
+    while (dayNum > monthDays) {
+        monthNum++;
+        monthDays += monthToDays(monthNum);
+    }
+    return monthName(monthNum);
+}
+
+dayToMonth(75);
